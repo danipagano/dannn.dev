@@ -48,7 +48,7 @@ export default function LogoTools({ placement = "top-left" }: { placement?: Plac
         title="Site tools"
       >
         {/* small spiral favicon */}
-        <img src="/public/images/black_spiral.webp" alt="" />
+        <img src="/public/images/black_spiral.gif" alt="black spiral" />
       </button>
 
       {open && (
