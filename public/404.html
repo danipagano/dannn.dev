@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>404 • dani’s site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <meta name="color-scheme" content="dark light" />
+  <style>
+    :root{
+      --bg:#0b0d11; --panel:#111318; --ink:#e7e9ea; --muted:#9aa0a6; --ring:#23272e;
+      --accent:#9b5cff; --radius:18px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f6f7f8; --panel:#ffffff; --ink:#0c0d0e; --muted:#5f6368; --ring:#e5e7eb; --accent:#7c3aed; }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:radial-gradient(1200px 800px at -10% -10%, rgba(155,92,255,.06), transparent 55%) , var(--bg);
+      color:var(--ink); font:16px/1.6 ui-sans-serif, system-ui, Inter, Segoe UI, Roboto, sans-serif;
+      display:grid; place-items:center; padding:24px;
+    }
+    .card{
+      width:min(900px, 92vw);
+      background:var(--panel);
+      border:1px solid var(--ring);
+      border-radius:var(--radius);
+      padding:28px clamp(18px, 4vw, 36px);
+      box-shadow:0 18px 48px rgba(0,0,0,.35);
+    }
+    .eyebrow{
+      display:inline-flex; align-items:center; gap:8px;
+      font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      font-size:.8rem; color:var(--muted);
+      border:1px solid var(--ring); border-radius:999px; padding:4px 10px;
+    }
+    h1{
+      margin:.4em 0 .2em; font-size:clamp(1.8rem, 4.2vw, 3rem); line-height:1.1;
+      letter-spacing:-.02em;
+    }
+    h1 .accent{ color:var(--accent); }
+    p.lede{ color:var(--muted); margin:.3rem 0 1rem; }
+    .actions{ display:flex; flex-wrap:wrap; gap:10px; margin:.5rem 0 0; }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      text-decoration:none; color:var(--ink);
+      background:var(--panel); border:1px solid var(--ring);
+      border-radius:999px; padding:8px 12px; cursor:pointer;
+      transition:border-color .15s, transform .12s;
+    }
+    .btn:hover{ border-color:var(--accent); transform:translateY(-1px); }
+    .links{ display:flex; flex-wrap:wrap; gap:12px; margin:14px 0 0; }
+    .links a{ color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+    .hr{ border:none; border-top:1px solid var(--ring); margin:18px 0; }
+    .footer{ color:var(--muted); font-size:.9rem; display:flex; gap:10px; align-items:center; }
+    .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:rgba(255,255,255,.06); padding:2px 6px; border-radius:6px; border:1px solid var(--ring); }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <p font-size="larger"> Not all those who wander are <span class="accent"> lost... </span> 
+        <strong> <span class="accent"> but some are. </span> </strong>
+    </p>
+    <h1 font-size="larger" color="#9b5cff">  404 </h1>
+
+    <p class="lede">
+      i'm gonna be honest, i didn't upload my resume yet – but here's where it'll be once i do! <br />
+    </p>
+
+    <div class="actions">
+      <a class="btn" href="/" id="homeBtn"> ← Take me home</a>
+    </div>
+
+    <hr class="hr" />
+
+    <div class="footer">
+      <span id="countdown" class="mono">Redirecting in 7…</span>
+      <button class="btn" id="cancelBtn" type="button">Cancel redirect</button>
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/danipagano" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="mailto:dannn10@proton.me?subject=Broken%20link%20on%20dann.dev&body=I%20hit%20a%20404%20at:%20%0A%0A{{URL}}">Report a broken link</a>
+    </div>
+  </main>
+
+  <script>
+    // Fill email with actual URL
+    const url = location.href;
+    document.querySelectorAll('a[href^="mailto:"]').forEach(a=>{
+      a.href = a.href.replace('{{URL}}', encodeURIComponent(url));
+    });
+
+    // Countdown redirect
+    const countdown = document.getElementById('countdown');
+    const cancelBtn = document.getElementById('cancelBtn');
+    let remaining = 7;
+    let timer = setInterval(()=>{
+      remaining--;
+      countdown.textContent = `Redirecting in ${remaining}…`;
+      if (remaining <= 0){ clearInterval(timer); location.replace('/'); }
+    }, 1000);
+    cancelBtn.addEventListener('click', ()=>{
+      clearInterval(timer);
+      countdown.textContent = 'Auto-redirect cancelled.';
+      cancelBtn.disabled = true;
+    });
+  </script>
+</body>
+</html>
