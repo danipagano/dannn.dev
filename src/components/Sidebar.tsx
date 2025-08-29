@@ -1,5 +1,5 @@
-import { PROFILE, LINKS } from "../data/profile";
-import { Github, Linkedin, Mail, MapPin, FileDown } from "lucide-react";
+import { PROFILE} from "../data/profile";
+import { Github, Linkedin, Mail, MapPin} from "lucide-react";
 import LogoTools from "./LogoTools";
 
 export default function Sidebar() {
