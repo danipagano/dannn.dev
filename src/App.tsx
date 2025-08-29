@@ -1,8 +1,7 @@
 import "./styles/global.css";
 import Sidebar from "./components/Sidebar";
 import ProjectsGrid from "./components/ProjectsGrid";
-import { FileDown, Moon, Sun } from "lucide-react";
-import { PROFILE } from "./data/profile";
+import { FileDown} from "lucide-react";
 
 export default function App() {
   return (
