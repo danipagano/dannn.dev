@@ -30,7 +30,7 @@ export default function Sidebar() {
         </div>
 
 <div className="links">
-  <a className="icon-link" href={`https://github.com/${PROFILE.github}`} target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
+  <a className="icon-link" href={`${PROFILE.github}`} target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
     <Github size={18} />
   </a>
   <a className="icon-link" href="https://linkedin.com/in/danielle-pagano-6a8491202" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">

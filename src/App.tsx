@@ -19,7 +19,7 @@ export default function App() {
           <a href="https://newbrunswick.rutgers.edu/" target="_blank" rel="noreferrer">
           Rutgers University</a>
             <br /> 
-            <br /> When I'm not coding or studying, you can find me playing the bass guitar, taking photos of random animals, or hanging around New Jersey.
+            <br /> When I'm not researching or coding, you can find me playing the bass guitar, taking photos (usually of animals), or hanging around New Jersey.
             <br />
             <br />
             <a className="btn" href="/public/404.html" target="_blank" rel="noreferrer">
