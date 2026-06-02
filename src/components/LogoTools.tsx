@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-type Placement = "top-left" | "sidebar";
+type Placement = "top-left" | "sidebar" | "masthead";
 
 function getTheme(): "light" | "dark" {
   return document.documentElement.classList.contains("light") ? "light" : "dark";
@@ -47,8 +47,8 @@ export default function LogoTools({ placement = "top-left" }: { placement?: Plac
         onClick={() => setOpen(v => !v)}
         title="Site tools"
       >
-        {/* small spiral favicon */}
-        <img src="/public/images/black_spiral.gif" alt="black spiral" />
+        {/* my favicon xoxo */}
+        <img src="/images/black_spiral.gif" alt="black spiral" />
       </button>
 
       {open && (

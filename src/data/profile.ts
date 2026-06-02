@@ -1,16 +1,16 @@
 export const PROFILE = {
   name: "dani pagano",
   role: "CS & Cognitive Science @ Rutgers",
-  tagline: "freelancer | researcher | aspiring archivist",
+  tagline: "Research on Artifical & Human Intelligence",
   location: "New Brunswick, NJ",
-  email: "dannn10@proton.me",
+  email: "danipagano33@gmail.com",
   avatarUrl: "/images/dan.png",   
-  github: "https://github.com/danipagano",
-  resumeUrl: "/resume.pdf",       
+  github: "https://github.com/danipagano",  
+  linkedin: "https://www.linkedin.com/in/dani-pagano-6a8491202",
 };
-export const LINKS = [
-  { label: "GitHub", href: `https://github.com/danipagano` },
-  { label: "Linkedin", href: `https://linkedin.com/in/danielle-pagano-6a8491202`},
-  { label: "Email", href: `mailto:${PROFILE.email}` },
+export const NAV = [
+  { label: "About", href: "#about" },
+  { label: "Research", href: "#research" },
+  { label: "Projects", href: "#projects" },
 ];
 

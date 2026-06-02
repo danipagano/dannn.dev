@@ -1,4 +1,6 @@
 import { PROJECTS } from "../data/projects";
+import { PROFILE } from "../data/profile";
+import { ArrowUpRight } from "lucide-react";
 
 export default function ProjectsGrid() {
   return (
@@ -24,6 +26,10 @@ export default function ProjectsGrid() {
           </a>
         ))}
       </div>
+
+      <a className = "more-link" href={PROFILE.github} target="_blank" rel="noreferrer">
+        see more on github <ArrowUpRight size={14} />
+      </a>
     </section>
   );
 }
