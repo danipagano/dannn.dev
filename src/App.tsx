@@ -26,7 +26,7 @@ export default function App() {
               </a>
             <br /> 
             <br /> 
-            My research interests lie at the intersection of human and artificial intelligence, with a focus on understanding how humans learn and process information. I am particularly interested in exploring the cognitive processes underlying learning and decision-making, and how these processes can be both modeled in artificial systems, to better understand the nature of intelligence.
+            My research interests lie at the intersection of human and artificial intelligence, with a focus on understanding how humans learn and process information. I am particularly interested in exploring the cognitive processes underlying learning and decision-making, and how these processes can be modeled in artificial systems, in order to better understand the nature of intelligence.
             <br />
             <br />
             When I'm not researching or coding, you can find me playing the bass guitar, tinkering with my minilab, or hanging out with my cat.
