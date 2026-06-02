@@ -4,7 +4,7 @@ export const PROFILE = {
   tagline: "Research on Artifical & Human Intelligence",
   location: "New Brunswick, NJ",
   email: "danipagano33@gmail.com",
-  avatarUrl: "/images/dan.png",   
+  avatarUrl: "/images/grad1.jpg",   
   github: "https://github.com/danipagano",  
   linkedin: "https://www.linkedin.com/in/dani-pagano-6a8491202",
 };
